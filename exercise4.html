@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Select State and District</h2>
+        <script>
+        var stateByCategory = { 
+
+    A: ["Visakhapatnam", "Chittor", "Kakinada","kurnool"], 
+
+    B: ["Hyderabad", "Karimnagar", "Khammam", "Sangareddy", "Nizamabad"], 
+
+   C: ["Salem", "Vellore", "Trichy", "Chennai"] 
+
+} 
+function list(value) { 
+    if (value.length == 0) document.getElementById("category").innerHTML = "<option></option>"; 
+    else { 
+        var options = ""; 
+        for (categoryId in stateByCategory[value]) { 
+            options += "<option>" + stateByCategory[value][categoryId] + "</option>"; 
+        } 
+        document.getElementById("category").innerHTML = options; 
+    } 
+} 
+        </script>
+        <select name="state" id="state" onChange="list(this.value);">
+            <option value="" disabled selected>Select State</option>
+            <option value="A">Andhra Pradesh</option>
+            <option value="B">Telangana</option>
+            <option value="C">TamilNadu</option>
+        </select><br><br>
+        <select name="category" id="category">
+            <option value="" disabled selected>Select District</option>
+        </select>
+    </body>
+</html>
