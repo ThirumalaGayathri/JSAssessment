@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>
+        String to a character array
+    </title>
+</head>
+  
+<body style="text-align:center;">
+          
+    <p id = "a" >ThirumalaGayathri</p>
+      
+    <input type="button" value="Click Here!" onclick="character()">
+      
+    <script>
+        function character() {
+            var str = document.getElementById("a").innerHTML;
+            document.getElementById("a").innerHTML = str.split("");
+        }
+    </script>
+</body>
+  
+</html>                    
